@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Afraz Ali Resume</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      .resume-root {
+        background: #121212;
+        font-family: "Kanit", Arial, sans-serif !important;
+        color: #fff;
+      }
+      .resume-container {
+        width: 950px;
+        max-width: 99vw;
+        margin: 46px auto 32px auto;
+        background: #181818;
+        border-radius: 20px;
+        box-shadow: 0 8px 56px 0 #10101099, 0 2px 10px #ea6c2b14;
+        overflow: hidden;
+        border: 2.5px solid #232323;
+        animation: cardAppear 0.8s cubic-bezier(0.24, 1.12, 0.46, 0.99);
+      }
+      @keyframes cardAppear {
+        0% {
+          opacity: 0;
+          transform: scale(0.96) translateY(60px);
+        }
+        80% {
+          opacity: 1;
+          transform: scale(1.03) translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+      .resume-header {
+        padding: 10px 54px 15px 54px;
+        background: #1d1d1d;
+        border-bottom: 3px solid #ea6c2b;
+        text-align: center;
+        transition: background 0.3s;
+      }
+      .resume-header:hover {
+        background: #232323;
+        cursor: pointer;
+      }
+      .resume-name {
+        font-family: "Kanit", Arial, sans-serif;
+        font-size: 46px;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: 2.2px;
+        text-shadow: 0 2px 24px #ea6c2b1a;
+        transition: color 0.3s;
+      }
+      .resume-header:hover .resume-name {
+        color: #ea6c2b;
+        text-shadow: 0 0 16px #ea6c2b33;
+        cursor: pointer;
+      }
+      .resume-contacts {
+        font-size: 17px;
+        margin: 2px 0 2px 0;
+        color: #ccc;
+        word-break: break-word;
+        letter-spacing: 0.7px;
+      }
+      .resume-contacts a {
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0 12px 0 0;
+        transition: color 0.18s, text-shadow 0.2s;
+        text-shadow: none;
+        word-break: break-all;
+        color: #ccc;
+      }
+      .resume-contacts a:hover {
+        color: #fff;
+        text-shadow: 0 0 14px #ea6c2b;
+        cursor: pointer;
+      }
+      .resume-contacts .fa {
+        margin-right: 7px;
+        transition: color 0.2s;
+      }
+      .resume-contacts .fa:hover {
+        color: #ea6c2b;
+        cursor: pointer;
+      }
+      .resume-main {
+        display: grid;
+        grid-template-columns: 310px 1fr;
+        gap: 0;
+      }
+      .section-title {
+        position: relative;
+        font-family: "Kanit", Arial, sans-serif;
+        font-size: 21px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        color: #ea6c2b;
+        margin-bottom: 21px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        background: transparent;
+        cursor: pointer;
+        transition: color 0.24s;
+      }
+      .section-title:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80%;
+        height: 3.5px;
+        background: linear-gradient(90deg, #ea6c2b 70%, #222 100%);
+        border-radius: 2px;
+        box-shadow: 0 0 0 #ea6c2b00;
+        transition: box-shadow 0.24s, background 0.24s, width 0.22s;
+        z-index: 0;
+      }
+      .section-title:hover,
+      .section-title:focus-within {
+        color: #fff;
+        cursor: pointer;
+      }
+      .section-title:hover:after,
+      .section-title:focus-within:after {
+        box-shadow: 0 0 16px #ea6c2b88, 0 2px 16px #ea6c2b99;
+        background: linear-gradient(90deg, #fff 60%, #ea6c2b 100%);
+        width: 100%;
+        cursor: pointer;
+      }
+      .section-title .fa {
+        font-size: 22px;
+        color: #ea6c2b;
+        transition: color 0.22s, text-shadow 0.23s, transform 0.2s;
+        z-index: 2;
+      }
+      .section-title:hover .fa,
+      .section-title:focus-within .fa {
+        color: #fff;
+        text-shadow: 0 0 16px #ea6c2b, 0 2px 10px #fff3;
+        transform: scale(1.15) rotate(-8deg);
+        cursor: pointer;
+      }
+      .resume-left {
+        border-right: 2px solid #232323;
+        background: #151515;
+        padding: 40px 36px 28px 36px;
+        transition: background 0.4s;
+        animation: leftFadeIn 1s cubic-bezier(0.11, 0.97, 0.36, 1.06);
+      }
+      @keyframes leftFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .resume-edu-school {
+        margin-bottom: 26px;
+        border-radius: 8px;
+        padding: 8px 10px 8px 12px;
+        transition: background 0.2s;
+        border: 1.5px solid #232323;
+      }
+      .resume-edu-school:hover {
+        background: #232323;
+        border-color: #ea6c2b;
+        box-shadow: 0 0 7px #ea6c2b44;
+        cursor: pointer;
+      }
+      .resume-edu-school .degree {
+        font-size: 17.4px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.3px;
+        transition: color 0.18s;
+      }
+      .resume-edu-school:hover .degree {
+        color: #ea6c2b;
+        cursor: pointer;
+      }
+      .resume-edu-school .field {
+        font-style: italic;
+        font-size: 15.7px;
+        color: #eeb88e;
+      }
+      .resume-edu-school .period,
+      .resume-edu-school .loc {
+        font-size: 14.7px;
+        color: #ffbe94;
+      }
+      .resume-ul {
+        padding-left: 19px;
+        margin-bottom: 18px;
+      }
+      .resume-ul li {
+        margin-bottom: 10px;
+        text-align: justify;
+        font-size: 15.8px;
+        color: #fff5e8;
+        line-height: 1.7;
+        border-left: 3px solid #212121;
+        padding-left: 10px;
+        transition: border-color 0.16s, color 0.16s, background 0.16s;
+        border-radius: 3px;
+        background: transparent;
+        margin-left: -2px;
+      }
+      .resume-ul li:hover {
+        border-color: #ea6c2b;
+        color: #ea6c2b;
+        background: #191919;
+        cursor: pointer;
+      }
+      .skill-title,
+      .soft-skill-title {
+        font-weight: bold;
+        color: #ea6c2b;
+        font-family: "Kanit", Arial, sans-serif;
+        transition: color 0.18s;
+      }
+      .resume-ul li:hover .skill-title,
+      .resume-ul li:hover .soft-skill-title {
+        color: #fff;
+        cursor: pointer;
+      }
+      .skill-detail,
+      .soft-skill-detail {
+        color: #f7be9c;
+        margin-left: 0.3em;
+        font-weight: 400;
+        font-size: 15px;
+        transition: color 0.18s;
+      }
+      .resume-ul li:hover .skill-detail,
+      .resume-ul li:hover .soft-skill-detail {
+        color: #fff5e8;
+        cursor: pointer;
+      }
+      .resume-exp-list {
+        margin-bottom: 24px;
+        padding-left: 0;
+        list-style: none;
+      }
+      .resume-exp-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        margin-bottom: 12px;
+        color: #fff3e3;
+        font-size: 15.6px;
+        text-align: justify;
+        border-left: 3px solid transparent;
+        padding-left: 2px;
+        transition: color 0.19s, border-color 0.16s, background 0.16s;
+      }
+      .exp-bullet {
+        flex-shrink: 0;
+        margin-top: 7px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ea6c2b 60%, #ffbe94 120%);
+        box-shadow: 0 0 0 #ea6c2b00;
+        transition: box-shadow 0.21s, background 0.16s;
+        display: inline-block;
+        border: 1.5px solid #232323;
+        opacity: 1;
+        transform: scale(1);
+      }
+      .resume-exp-list li:hover .exp-bullet {
+        box-shadow: 0 0 9px #ea6c2bcc, 0 2px 11px #ffbe9442;
+        background: linear-gradient(120deg, #fff 30%, #ea6c2b 100%);
+        cursor: pointer;
+      }
+      .resume-exp-list li:hover {
+        color: #ea6c2b;
+        border-left: 3px solid #ea6c2b;
+        background: #191919;
+        cursor: pointer;
+      }
+      .resume-right {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 40px;
+        animation: rightFadeIn 1s 0.3s cubic-bezier(0.11, 0.97, 0.36, 1.06)
+          backwards;
+      }
+      @keyframes rightFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .resume-exp-role {
+        font-size: 18.7px;
+        font-weight: 700;
+        color: #ffbe94;
+        letter-spacing: 0.7px;
+        text-shadow: 0 0 8px #ea6c2b55;
+      }
+      .resume-exp-company {
+        font-size: 16.2px;
+        color: #fff3e3;
+        font-weight: 600;
+      }
+      .resume-exp-period {
+        font-size: 14.8px;
+        color: #ffbe94;
+        margin-bottom: 7px;
+      }
+      .resume-footnote {
+        margin: 28px auto 5px auto;
+        color: #ccc;
+        text-align: center;
+        letter-spacing: 0.8px;
+        font-size: 17px;
+        text-shadow: 0 0 8px #222, 0 1px 6px #181818;
+        font-family: "Kanit", Arial, sans-serif;
+        padding-bottom: 16px;
+      }
+      .resume-footnote span {
+        color: #555;
+        font-weight: bold;
+        transition: color 0.19s ease-in;
+      }
+      .resume-footnote span:hover {
+        color: #ea6c2b;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .react-spin {
+        display: inline-block;
+        margin-right: 9px;
+        font-size: 20px;
+        color: #5cdfff;
+        animation: spin 2s linear infinite;
+        vertical-align: middle;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .fab {
+        margin-right: 8px;
+        margin-left: 8px;
+      }
+      .bar {
+        margin-left: -4px;
+      }
+      .bar-two {
+        margin-left: -8px;
+      }
+      @media (max-width: 900px) {
+        .resume-container,
+        .resume-actions {
+          width: 99vw !important;
+          max-width: 100vw !important;
+          margin: 0 auto !important;
+          border-radius: 0 !important;
+        }
+        .resume-main {
+          grid-template-columns: 1fr !important;
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0 !important;
+        }
+        .resume-left,
+        .resume-right {
+          padding: 20px 6vw 10px 6vw !important;
+          min-width: 0 !important;
+          max-width: 100vw !important;
+        }
+        .resume-left {
+          border-right: none !important;
+          border-bottom: 2px solid #232323 !important;
+          background: #181818 !important;
+        }
+        .resume-right {
+          padding-left: 6vw !important;
+        }
+        .resume-name {
+          font-size: 28px !important;
+          text-align: center !important;
+          line-height: 1.18 !important;
+        }
+        .resume-header {
+          padding: 20px 4vw 13px 4vw !important;
+        }
+        .resume-footnote {
+          font-size: 14px !important;
+          padding-bottom: 14px;
+        }
+      }
+      @media print {
+        a[href^="http"]:after,
+        a[href^="mailto:"]:after,
+        a[href^="tel:"]:after {
+          content: " (" attr(href) ")";
+          color: #ea6c2b;
+          font-size: 13px;
+          word-break: break-all;
+        }
+        .resume-exp-list li,
+        .resume-ul li {
+          color: #000 !important;
+          background: #fff !important;
+          border-color: #ea6c2b !important;
+        }
+        .exp-bullet {
+          background: #ea6c2b !important;
+          border-color: #ea6c2b !important;
+          box-shadow: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-root">
+      <div class="resume-container" id="resume">
+        <div class="resume-header">
+          <div class="resume-name">Afraz Ali</div>
+          <div class="resume-contacts">
+            <a href="mailto:afrazali.contact@gmail.com">
+              <i class="fa fa-envelope"></i>afrazali.contact@gmail.com
+            </a>
+            <br />
+            <a
+              href="https://linkedin.com/in/afraz-ali/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>LinkedIn
+            </a>
+            <span class="bar">|</span>
+            <a
+              href="https://github.com/Afraz94"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i>GitHub
+            </a>
+            <br />
+            <a
+              href="https://wa.me/919163575549"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-phone"></i> 9163575549
+            </a>
+            <span class="bar-two">|</span>
+            <span> Kolkata, West Bengal</span>
+          </div>
+        </div>
+        <div class="resume-main">
+          <div class="resume-left">
+            <div class="section-title">
+              <i class="fa fa-graduation-cap"></i> Education
+            </div>
+            <div class="resume-edu-school">
+              <div class="degree">JOGESH CHANDRA CHAUDHURI COLLEGE</div>
+              <div class="field">
+                Bachelor of Arts
+                <span style="font-weight: 400">(Honours in English)</span>
+              </div>
+              <div class="period">2014 – 2017</div>
+              <div class="loc">Kolkata, West Bengal</div>
+            </div>
+            <div class="section-title">
+              <i class="fa fa-laptop-code"></i> Technical Proficiencies
+            </div>
+            <ul class="resume-ul">
+              <li>
+                <span class="skill-title"
+                  >Application Architecture & Development</span
+                >
+              </li>
+              <li>
+                <span class="skill-title">Frontend</span
+                ><span class="skill-detail"
+                  >: HTML5, CSS3, React.js (Hooks), Next.js, Tailwind, CSS,
+                  Bootstrap, Lottie Animations</span
+                >
+              </li>
+              <li>
+                <span class="skill-title">Backend & APIs</span
+                ><span class="skill-detail">: Node.js, REST APIs</span>
+              </li>
+              <li>
+                <span class="skill-title">Database/Version Control</span
+                ><span class="skill-detail">: MongoDB, Git</span>
+              </li>
+              <li>
+                <span class="skill-title">DevOps/Infra</span
+                ><span class="skill-detail"
+                  >: Docker Compose, Netlify Functions, Domain & DNS
+                  Management</span
+                >
+              </li>
+              <li>
+                <span class="skill-title">Others</span
+                ><span class="skill-detail"
+                  >: SWR (React Context), OpenAI API</span
+                >
+              </li>
+              <li><span class="skill-title">Prompt Engineering</span></li>
+            </ul>
+            <div class="section-title">
+              <i class="fa fa-users"></i> Interpersonal Skills
+            </div>
+            <ul class="resume-ul">
+              <li>
+                <span class="soft-skill-title">Communication</span
+                ><span class="soft-skill-detail"
+                  >: Clear, tailored communication across diverse
+                  audiences</span
+                >
+              </li>
+              <li>
+                <span class="soft-skill-title">Adaptability</span
+                ><span class="soft-skill-detail"
+                  >: Flexible approach in addressing diverse needs</span
+                >
+              </li>
+              <li>
+                <span class="soft-skill-title">Execution</span
+                ><span class="soft-skill-detail"
+                  >: Goal-oriented planning and independent ownership of
+                  tasks</span
+                >
+              </li>
+              <li>
+                <span class="soft-skill-title">Relationship Management</span
+                ><span class="soft-skill-detail"
+                  >: Built trust and long–term rapport</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="resume-right">
+            <div class="section-title">
+              <i class="fa fa-briefcase"></i> Experience
+            </div>
+            <div style="margin-bottom: 34px">
+              <div class="resume-exp-role">
+                SOLO FULL-STACK DEVELOPER
+                <span class="resume-exp-company">| STAFFSOUL</span>
+              </div>
+              <div class="resume-exp-period">2024 – Ongoing</div>
+              <ul class="resume-exp-list">
+                <li>
+                  <span class="exp-bullet"></span>Architected and built a
+                  scalable, multi-role SaaS job portal as a solo full-stack
+                  engineer using Next.js and MongoDB.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Led Docker-based development,
+                  and streamlined deployment using Netlify Functions and custom
+                  domain/DNS configuration.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Delivered mobile-first,
+                  responsive UI/UX with advanced animations (SVG, Lottie) and
+                  custom React hooks, optimizing engagement across devices.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Ensured code quality and
+                  maintainability with modular Mongoose models and robust
+                  version control practices.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Designed and implemented
+                  multi-role dashboards with strict access controls, custom
+                  HOCs, and in-app notification systems.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Created scalable API endpoints
+                  for OTP-based auth, job lifecycle management, resume uploads,
+                  and candidate-client matching (with OpenAI-assisted
+                  suggestions).
+                </li>
+              </ul>
+            </div>
+            <div style="margin-bottom: 34px">
+              <div class="resume-exp-role">EDUCATIONAL SPECIALIST</div>
+              <div class="resume-exp-period">2013 – 2024</div>
+              <ul class="resume-exp-list">
+                <li>
+                  <span class="exp-bullet"></span>Developed and delivered
+                  personalized tutoring sessions tailored to individual student
+                  needs, resulting in measurable academic improvement and
+                  enhanced learning outcomes.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Equipped students with the
+                  necessary skills and strategies to excel in competitive exams
+                  such as IELTS, SAT and UPSC, through rigorous preparation and
+                  focused coaching.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Demonstrated adaptability and
+                  versatility by accommodating various learning styles,
+                  abilities, and age groups, including elementary, middle school
+                  and high school students.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Continuously evaluated student
+                  progress and performance through assessments and feedback,
+                  adjusting teaching strategies as needed to address areas of
+                  difficulty and maximize learning outcomes.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Utilized technology and online
+                  platforms to facilitate remote learning and provide flexible
+                  scheduling options for students, expanding reach and
+                  accessibility of tutoring services.
+                </li>
+                <li>
+                  <span class="exp-bullet"></span>Established a reputable and
+                  reliable tutoring practice through word-of-mouth referrals,
+                  positive reviews, and client testimonials, reflecting
+                  dedication to excellence and student success over the years.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="resume-footnote">
+          <i class="fab fa-react react-spin"></i>
+          <span>This resume was crafted 100% in <b>React.js</b></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

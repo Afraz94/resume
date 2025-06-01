@@ -37,7 +37,7 @@ const skills = [
     detail:
       "HTML5, CSS3, React.js (Hooks), Next.js, Tailwind, CSS, Bootstrap, Lottie Animations",
   },
-  { label: "Backend & APIs", detail: "Node.js, REST APIs, Websocket, JWT" },
+  { label: "Backend & APIs", detail: "Node.js, REST APIs, Socket.IO, JWT" },
   { label: "Database/Version Control", detail: "MongoDB, Git" },
   {
     label: "DevOps/Infra",

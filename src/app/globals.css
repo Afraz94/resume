@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;800&display=swap");
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body,
 .resume-root {
   background: #121212;
@@ -157,7 +166,7 @@ body,
 .resume-left {
   border-right: 2px solid #232323;
   background: #151515;
-  padding: 40px 36px 28px 36px;
+  padding: 40px 36px 0 36px;
   transition: background 0.4s;
   animation: leftFadeIn 1s cubic-bezier(0.11, 0.97, 0.36, 1.06);
 }
@@ -413,13 +422,17 @@ body,
 /* Footer */
 .resume-footnote {
   margin: 28px auto 5px auto;
+  margin-top: 0 !important;
+  border-top: 2px solid #232323;
+  background: #151515;
+  padding-top: 8px;
   color: #ccc;
   text-align: center;
   letter-spacing: 0.8px;
   font-size: 17px;
   text-shadow: 0 0 8px #222, 0 1px 6px #181818;
   font-family: "Kanit", Arial, sans-serif;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 .resume-footnote span {
@@ -478,10 +491,12 @@ body,
 @media (max-width: 900px) {
   .resume-container,
   .resume-actions {
-    width: 99vw !important;
+    width: 100% !important;
     max-width: 100vw !important;
     margin: 0 auto !important;
-    border-radius: 0 !important;
+    border-radius: 30px !important;
+    padding-right: 1px !important;
+    padding-right: 0 !important;
   }
   .resume-main {
     grid-template-columns: 1fr !important;
@@ -491,7 +506,7 @@ body,
   }
   .resume-left,
   .resume-right {
-    padding: 20px 6vw 10px 6vw !important;
+    padding: 20px 6vw 0 6vw !important;
     min-width: 0 !important;
     max-width: 100vw !important;
   }
@@ -499,6 +514,8 @@ body,
     border-right: none !important;
     border-bottom: 2px solid #232323 !important;
     background: #181818 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
   }
   .resume-right {
     padding-left: 6vw !important;
@@ -513,7 +530,8 @@ body,
   }
   .resume-footnote {
     font-size: 14px !important;
-    padding-bottom: 14px;
+    padding-bottom: 8px;
+    margin-bottom: 0 !important;
   }
   .savepdf-btn {
     font-size: 15px !important;
